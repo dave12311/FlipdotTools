@@ -1,0 +1,33 @@
+﻿<Window x:Class="FlipdotTools.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlipdotTools"
+        mc:Ignorable="d"
+        Title="Flipdot Tools" Height="383" Width="800" ResizeMode="NoResize" WindowStyle="SingleBorderWindow" Icon="D:\Documents\Programming\FlipdotTools\icon.png">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="352" VerticalAlignment="Top" Width="792">
+            <TabItem Header="Font Encoder">
+                <Grid>
+                    <StackPanel x:Name="MainPanel" HorizontalAlignment="Center" Height="210" VerticalAlignment="Top" Width="720" Orientation="Horizontal"/>
+                    <TextBox x:Name="TextOut" Text="Click on a pixel to begin" TextAlignment="Center" Width="720" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,65" IsReadOnly="True" Background="#E8E8E8"/>
+
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="500" Height="20" Margin="0,0,0,25" Orientation="Horizontal">
+                        <Button Content="Clear" ToolTip="Clear the screen" x:Name="Button_Clear" Width="80" HorizontalAlignment="Left" Click="Button_Clear_Click"/>
+                        <Button x:Name="Button_Clipboard" ToolTip="Copy the encoded content to the Clipboard" Content="Copy to Clipboard" Width="120" HorizontalAlignment="Right" Margin="300,0,0,0" Click="Button_Clipboard_Click"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Text Encoder">
+                <Grid>
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBox x:Name="InputBox" HorizontalAlignment="Center" Height="23" Margin="0,0,0,40" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" TextChanged="Input_TextChanged" CharacterCasing="Upper"/>
+                        <TextBox x:Name="OutputBox" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Margin="0" IsReadOnly="True" Text="Start typing to begin" Background="#E8E8E8"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
