@@ -226,10 +226,9 @@ namespace FlipdotTools {
             if (InputBox.Text.Length > 0) {
                 Code = "{";
                 foreach (char c in InputBox.Text.ToCharArray()) {
-                    Code += Decode(c).ToString() + ",";
+                    Code += (Decode(c)+1).ToString() + ",";
                 }
-                Code = Code.TrimEnd(',');
-                Code += "}";
+                Code += "0}";
                 OutputBox.Text = Code;
             } else {
                 OutputBox.Text = "Start typing to begin";
